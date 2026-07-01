@@ -1,0 +1,17 @@
+---
+import { SITE_CONFIG } from '../config';
+const year = new Date().getFullYear();
+---
+<footer class="border-t border-line">
+  <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <a href="#top" class="font-serif text-2xl">{SITE_CONFIG.name}</a>
+    <div class="flex gap-6 text-sm text-muted">
+      <a href="#services" class="hover:text-accent transition-colors">Services</a>
+      <a href="#work" class="hover:text-accent transition-colors">Work</a>
+      <a href="#process" class="hover:text-accent transition-colors">Process</a>
+      <a href="#about" class="hover:text-accent transition-colors">About</a>
+      <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+    </div>
+    <div class="text-xs text-muted">&copy; {year} {SITE_CONFIG.name}</div>
+  </div>
+</footer>
