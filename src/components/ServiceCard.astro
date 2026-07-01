@@ -1,0 +1,10 @@
+---
+import type { Service } from '../data/content';
+interface Props { service: Service }
+const { service } = Astro.props;
+---
+<article class="group p-8 rounded-2xl bg-card border border-line transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
+  <div class="text-3xl text-accent mb-4">{service.icon}</div>
+  <h3 class="font-serif text-2xl mb-3">{service.title}</h3>
+  <p class="text-sm text-muted leading-relaxed">{service.description}</p>
+</article>
