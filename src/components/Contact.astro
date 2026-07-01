@@ -3,7 +3,7 @@ import { SITE_CONFIG } from '../config';
 ---
 <section id="contact" class="reveal max-w-6xl mx-auto px-6 py-24 md:py-32">
   <div class="max-w-3xl">
-    <span class="text-xs uppercase tracking-widest text-muted">Get in touch</span>
+    <span class="text-xs uppercase tracking-widest text-muted font-mono">Get in touch</span>
     <h2 class="font-serif mt-3" style="font-size: clamp(2rem, 4vw, 3.5rem);">Let's build something.</h2>
     <p class="mt-6 text-lg text-muted">Tell us about your business and what you're trying to automate. We'll get back to you within one business day.</p>
   </div>
@@ -18,11 +18,11 @@ import { SITE_CONFIG } from '../config';
     </div>
     <div class="flex flex-col gap-6 justify-center">
       <div>
-        <div class="text-xs uppercase tracking-widest text-muted mb-2">Email</div>
+        <div class="text-xs uppercase tracking-widest text-muted mb-2 font-mono">Email</div>
         <a href={`mailto:${SITE_CONFIG.socials.email}`} class="font-serif text-xl hover:text-accent transition-colors">{SITE_CONFIG.socials.email}</a>
       </div>
       <div>
-        <div class="text-xs uppercase tracking-widest text-muted mb-2">Socials</div>
+        <div class="text-xs uppercase tracking-widest text-muted mb-2 font-mono">Socials</div>
         <div class="flex gap-6">
           <a href={SITE_CONFIG.socials.instagram} class="hover:text-accent transition-colors">Instagram</a>
           <a href={SITE_CONFIG.socials.linkedin} class="hover:text-accent transition-colors">LinkedIn</a>

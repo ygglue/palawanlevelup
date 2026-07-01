@@ -8,7 +8,7 @@ const { study } = Astro.props;
     <img src={study.screenshot} alt={`${study.client} case study`} class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
   </div>
   <div class="mt-6">
-    <div class="flex flex-wrap gap-x-3 text-xs uppercase tracking-widest text-muted mb-3">
+    <div class="flex flex-wrap gap-x-3 text-xs uppercase tracking-widest text-muted mb-3 font-mono">
       <span>{study.client}</span><span>·</span><span>{study.date}</span><span>·</span>
       {study.services.map((s, i) => (
         <>{s}{i < study.services.length - 1 && ' ·'}</>

@@ -4,8 +4,52 @@ import { stats } from '../data/content';
 <div class="grid grid-cols-3 gap-8 mt-16 max-w-2xl">
   {stats.map((stat) => (
     <div>
-      <div class="font-serif text-4xl md:text-5xl">{stat.value}</div>
-      <div class="text-xs uppercase tracking-widest text-muted mt-2">{stat.label}</div>
+      <div class="font-serif text-4xl md:text-5xl" data-counter-target={stat.value} data-counter-suffix={stat.suffix}>
+        <span class="counter-value">0</span>{stat.suffix}
+      </div>
+      <div class="text-xs uppercase tracking-widest text-muted mt-2 font-mono">{stat.label}</div>
     </div>
   ))}
 </div>
+<script>
+  (function () {
+    const counterEls = document.querySelectorAll<HTMLElement>('[data-counter-target]');
+    if (!counterEls.length) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      counterEls.forEach((el) => {
+        const target = parseInt(el.dataset.counterTarget || '0');
+        const span = el.querySelector('.counter-value');
+        if (span) span.textContent = String(target);
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        observer.unobserve(entry.target);
+
+        const el = entry.target as HTMLElement;
+        const target = parseInt(el.dataset.counterTarget || '0');
+        const span = el.querySelector('.counter-value');
+        if (!span) return;
+
+        const duration = 1500;
+        const start = performance.now();
+
+        function animate(now: number) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          span.textContent = String(Math.round(target * eased));
+          if (progress < 1) requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
+      });
+    }, { threshold: 0.5 });
+
+    counterEls.forEach((el) => observer.observe(el));
+  })();
+</script>

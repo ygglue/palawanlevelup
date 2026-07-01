@@ -19,7 +19,8 @@ export interface ProcessStep {
 }
 
 export interface Stat {
-  value: string;
+  value: number;
+  suffix: string;
   label: string;
 }
 
@@ -50,9 +51,9 @@ export const processSteps: ProcessStep[] = [
 ];
 
 export const stats: Stat[] = [
-  { value: '20+', label: 'Clients served' },
-  { value: '50+', label: 'Automations built' },
-  { value: '3x', label: 'Avg. lead response speed' },
+  { value: 20, suffix: '+', label: 'Clients served' },
+  { value: 50, suffix: '+', label: 'Automations built' },
+  { value: 3, suffix: 'x', label: 'Avg. lead response speed' },
 ];
 
 export const testimonials: Testimonial[] = [

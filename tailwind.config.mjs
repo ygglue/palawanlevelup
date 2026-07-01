@@ -14,6 +14,7 @@ export default {
       fontFamily: {
         serif: ['"Instrument Serif"', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
     },
   },

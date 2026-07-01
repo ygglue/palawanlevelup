@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://YOUR_GITHUB_USERNAME.github.io',
+  site: 'https://ygglue.github.io',
   base: '/palawanlevelup',
   output: 'static',
   integrations: [tailwind(), sitemap()],

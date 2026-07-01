@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR_GITHUB_USERNAME.github.io/palawanlevelup/sitemap-index.xml
+Sitemap: https://ygglue.github.io/palawanlevelup/sitemap-index.xml
