@@ -7,3 +7,4 @@ Task 4: dispatched for review
 Task 4 (fix applied): complete
 Task 5: complete (commits e0eb99d..6caa0d5, review clean)
 Task 6: complete (commits 6caa0d5..2ef8a8f, review clean)
+Task 7: complete (commits 2ef8a8f..fa1ae8f, review clean)

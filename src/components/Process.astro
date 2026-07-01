@@ -1,0 +1,18 @@
+---
+import { processSteps } from '../data/content';
+---
+<section id="process" class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+  <div class="mb-16">
+    <span class="text-xs uppercase tracking-widest text-muted">How we work</span>
+    <h2 class="font-serif mt-3" style="font-size: clamp(2rem, 4vw, 3.5rem);">Process</h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+    {processSteps.map((step) => (
+      <div>
+        <div class="font-serif text-4xl text-accent mb-3">{step.number}</div>
+        <h3 class="font-serif text-xl mb-2">{step.title}</h3>
+        <p class="text-sm text-muted leading-relaxed">{step.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
