@@ -9,7 +9,7 @@ const { study } = Astro.props;
   </div>
   <div class="mt-6">
     <div class="flex flex-wrap gap-x-3 text-xs uppercase tracking-widest text-muted mb-3">
-      <span>Client</span><span>·</span><span>{study.date}</span><span>·</span>
+      <span>{study.client}</span><span>·</span><span>{study.date}</span><span>·</span>
       {study.services.map((s, i) => (
         <>{s}{i < study.services.length - 1 && ' ·'}</>
       ))}

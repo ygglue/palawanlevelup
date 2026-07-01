@@ -1,6 +1,6 @@
 ---
 import { services } from '../data/content';
-const items = [...services.map(s => s.title), 'Landing Pages', 'Automations', 'GHL Setup', 'Strategy'];
+const items = services.map(s => s.title);
 const strip = [...items, ...items];
 ---
 <div class="border-y border-line overflow-hidden py-6 bg-card">

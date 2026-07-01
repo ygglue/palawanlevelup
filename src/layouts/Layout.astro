@@ -21,6 +21,9 @@ const { title, description } = Astro.props;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content={`${new URL('/og-image.svg', Astro.site)}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}/favicon.svg`} />
     <link rel="canonical" href={`https://YOUR_GITHUB_USERNAME.github.io/palawanlevelup/`} />
     <title>{title}</title>
