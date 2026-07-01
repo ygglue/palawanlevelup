@@ -1,0 +1,26 @@
+---
+import { SITE_CONFIG } from '../config';
+---
+<section id="top" class="min-h-screen flex flex-col justify-center max-w-6xl mx-auto px-6 pt-32 pb-20">
+  <h1 class="font-serif font-normal leading-[1.05]" style="font-size: clamp(3rem, 8vw, 7rem);">
+    Landing pages &amp; automations<br />that convert.
+  </h1>
+  <p class="mt-8 max-w-xl text-lg text-muted">
+    {SITE_CONFIG.name} builds Go High Level landing pages and automation flows that help businesses turn visitors into booked clients.
+  </p>
+  <div class="mt-10 flex flex-wrap gap-4">
+    <a href="#work" class="bg-ink text-cream px-6 py-3 rounded-full text-sm hover:bg-accent transition-colors">See our work</a>
+    <a href="#contact" class="border border-ink px-6 py-3 rounded-full text-sm hover:bg-ink hover:text-cream transition-colors">Get in touch</a>
+  </div>
+  <div class="mt-20">
+    <div class="flex flex-wrap gap-3 text-xs uppercase tracking-widest text-muted">
+      <span>Landing Pages</span><span>·</span>
+      <span>Automations</span><span>·</span>
+      <span>CRM &amp; GHL Setup</span><span>·</span>
+      <span>Audit &amp; Strategy</span>
+    </div>
+  </div>
+  <a href="#services" class="hidden md:flex mt-24 mx-auto w-12 h-12 rounded-full border border-line items-center justify-center text-muted hover:text-accent hover:border-accent transition-colors" aria-label="Scroll down">
+    ↓
+  </a>
+</section>
