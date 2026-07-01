@@ -8,7 +8,7 @@ const links = [
   { href: '#contact', label: 'Contact' },
 ];
 ---
-<header id="nav" class="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-sm border-b border-line transition-transform duration-300">
+<header id="nav" class="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-sm border-b border-line motion-safe:transition-transform motion-safe:duration-300">
   <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
     <a href="#top" class="font-serif text-2xl">{SITE_CONFIG.name}</a>
     <ul class="hidden md:flex items-center gap-8">
@@ -34,8 +34,10 @@ const links = [
   const header = document.getElementById('nav');
   const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('mobile-menu');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let lastScroll = 0;
   window.addEventListener('scroll', () => {
+    if (prefersReducedMotion) return;
     const current = window.scrollY;
     if (current > lastScroll && current > 100) {
       header?.style.setProperty('transform', 'translateY(-100%)');
