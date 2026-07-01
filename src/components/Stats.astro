@@ -1,0 +1,11 @@
+---
+import { stats } from '../data/content';
+---
+<div class="grid grid-cols-3 gap-8 mt-16 max-w-2xl">
+  {stats.map((stat) => (
+    <div>
+      <div class="font-serif text-4xl md:text-5xl">{stat.value}</div>
+      <div class="text-xs uppercase tracking-widest text-muted mt-2">{stat.label}</div>
+    </div>
+  ))}
+</div>
