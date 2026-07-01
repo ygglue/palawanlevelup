@@ -10,3 +10,6 @@ Task 6: complete (commits 6caa0d5..2ef8a8f, review clean)
 Task 7: complete (commits 2ef8a8f..fa1ae8f, review clean)
 Task 8: complete (commits fa1ae8f..cfbebfc, review clean)
 Task 9: complete (commits cfbebfc..d6d4013, review clean)
+Task 10: complete
+Task 11: complete
+Task 12: complete
